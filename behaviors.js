@@ -148,7 +148,7 @@ function checkForWinGlobl(team){
     if(globalGame[0][0] == globalGame[1][1] && globalGame[1][1] == globalGame[2][2] && globalGame[1][1] != "none"){
         bigWin(team)
     }
-    if(globalGame[2][2] == globalGame[1][1] && globalGame[1][1] == globalGame[2][0] && globalGame[1][1] != "none"){
+    if(globalGame[0][2] == globalGame[1][1] && globalGame[1][1] == globalGame[2][0] && globalGame[1][1] != "none"){
         bigWin(team)
     }
 }
