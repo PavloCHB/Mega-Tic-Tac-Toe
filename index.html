@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Tik-Tak-Toe</title>
+    <!-- Styles-->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- scripts-->
+    <script defer src="showRules.js"></script>
+    <script defer src="board-setting.js"></script>
+    <script defer src="behaviors.js"></script>
+    <script defer src="start.js"></script>
+
+</head>
+<body>
+    <header>
+        <button onclick="startGame(); hideShowedRules()">Restart</button>
+        <button onclick="showHideRules()">Show Rules</button>
+    </header>
+    <div id="rules" class="hidden">
+        <h2>Como jugar</h2>
+        <p>El Mega tic-tac-toe es un juego de estrategia en el cual gana quien logre hacer ganar 3
+             partidas en tableros alineados, pero no es tan simple como parece, ya que no puedes 
+              colocar tu ficha donde quieras, los espacios que tengas disponibles estaran determinados
+               por el movimiento que realizo previamente tu oponente. 
+               <br><br>
+               ¿Como funciona esto?
+               <br><br>
+               Bien, al comenzar la partida todas las casillas de todos los tableros estaran habilitadas
+                para que el primer jugador (Cruz), coloque su ficha, pero dependiendo el lugar en que este 
+                la coloque definira donde jugara su rival. 
+                <br>
+                Supongamos que la primera ficha es colocada en la <span> esquina superior derecha</span> del <span>tablero central</span>.
+                 En este caso el siguiente jugador debera colocar su ficha en una de las casillas disponibles en el <span>tablero superior derecho</span>.
+                 <br>
+                 Y asi para todos los casos, la posicion en el tablero pequeño definira el a que tablero debera ir a jugar el sieguiente jugador.
+                 <br>
+                 <br>
+                 Hay que tener en cuenta que una vez que un jugador haya ganado la partida a disputarse en uno de los tableros
+                  el otro jugador ya no podra ganar en ese tablero aunque alinee tres de sus fichas.
+                  <br>
+                  <br>
+                  Tambien ha de tenerse en cuenta que si un movimiento envia al jugador en turno a un tablero sin 
+                  casillas disponibles, el jugador podra jugar en cualquier casilla de cualquier tablero que se encuentre
+                    disponible
+        </p>
+    </div>
+    <div id="win-result" class="hidden">
+        <span> Nobady Win Anything!!!</span>
+        <button onclick="startGame()">Restart</button>
+    </div>
+    <div id="mega-board" data-turn="cross" class="board"></div>
+
+</body>
+</html> 
