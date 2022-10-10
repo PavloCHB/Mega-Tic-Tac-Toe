@@ -122,6 +122,11 @@ button{
     padding: 2%;
 }
 
+.board .board{
+    gap: 5%;
+    padding: 5%;
+}
+
 .board.cell{
     background-color: black;
 }
